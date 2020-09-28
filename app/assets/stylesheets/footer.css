@@ -1,0 +1,54 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--u-padding);
+  background: rgb(255, 255, 255);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+}
+
+.jon {
+  font-size: 4.5rem;
+  line-height: 0.4;
+  font-family: "Permanent Marker", cursive;
+}
+.subtitle {
+  font-size: 1rem;
+  line-height: 2.2;
+  font-family: "Permanent Marker", cursive;
+  color: var(--primary);
+}
+
+.nav-secondary-list {
+  list-style: none;
+  display: flex;
+  margin-top: -0.2rem;
+}
+.nav-secondary-item a {
+  color: inherit;
+  font-size: 1.75rem;
+  line-height: 1;
+  transition: all ease-in-out 150ms;
+}
+.nav-secondary-item + .nav-secondary-item {
+  margin-left: 0.5em;
+}
+.nav-secondary-item:hover a {
+  color: var(--primary);
+}

@@ -1,0 +1,10 @@
+<header>
+    <nav>
+      <ul class="nav-main-list">
+        <li class="nav-main-item <% if current_page?(about_path)%> active<%end%>"><%= link_to "About", about_path %></li>
+        <li class="nav-main-item <% if current_page?(about_path)%> active<%end%>"><%= link_to "Art", about_path %></li>
+        <li class="nav-main-item <% if current_page?(contact_path)%> active<%end%>"><%= link_to "Contact", contact_path %></li>
+      </ul>
+    </nav>
+
+</header>

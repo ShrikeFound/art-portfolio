@@ -13,3 +13,64 @@
  *= require_tree .
  *= require_self
  */
+
+:root {
+  --u-padding: 25px;
+  font-size: 21px;
+  --primary: #d20101;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+h1 {
+  font-family: "Permanent Marker", cursive;
+}
+main {
+  padding-top: 3em;
+}
+
+p {
+  max-width: 60ch;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.active {
+  color: var(--primary);
+}
+.about,
+.contact {
+  max-width: max-content;
+  margin: 0 auto;
+  padding: 0 var(--u-padding);
+  min-height: 800px;
+}
+.about .title,
+.contact .title {
+  text-align: center;
+}
+.about-image {
+  height: 200px;
+  width: 200px;
+  margin: calc(var(--u-padding) / 2) auto;
+}
+.about-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
