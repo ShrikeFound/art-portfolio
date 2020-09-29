@@ -58,7 +58,7 @@ p {
   max-width: max-content;
   margin: 0 auto;
   padding: 0 var(--u-padding);
-  min-height: 800px;
+  min-height: 700px;
 }
 .about .title,
 .contact .title {
