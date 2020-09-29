@@ -68,9 +68,19 @@ p {
   height: 200px;
   width: 200px;
   margin: calc(var(--u-padding) / 2) auto;
+  clip-path: polygon(0% 1%, 100% 0%, 98% 96%, 2% 97%);
 }
 .about-image img {
   height: 100%;
   width: 100%;
   object-fit: contain;
+}
+
+.project-image {
+  width: 80%;
+  max-width: 300px;
+}
+.project-image img {
+  width: 100%;
+  height: auto;
 }

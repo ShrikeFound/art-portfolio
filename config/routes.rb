@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  resources :projects
+  devise_for :users
   get 'about', to: "static_pages#about"
   get 'contact', to:"static_pages#contact"
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "/login" => "devise/sessions#new"
+  root to: "projects#index"
 end
