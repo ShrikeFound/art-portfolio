@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except:[:show]
   # GET /projects
   # GET /projects.json
   def index
@@ -14,16 +14,25 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
+    unless current_user && current_user.admin
+      redirect_to projects_path
+    end
     @project = Project.new
   end
 
   # GET /projects/1/edit
   def edit
+    unless current_user && current_user.admin
+      redirect_to projects_path
+    end
   end
 
   # POST /projects
   # POST /projects.json
   def create
+    unless current_user && current_user.admin
+      redirect_to projects_path
+    end
     @project = Project.new(project_params)
 
     respond_to do |format|
@@ -40,6 +49,9 @@ class ProjectsController < ApplicationController
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
   def update
+    unless current_user && current_user.admin
+      redirect_to projects_path
+    end
     respond_to do |format|
       if @project.update(project_params)
         format.html { redirect_to @project, notice: 'Project was successfully updated.' }
@@ -54,6 +66,9 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1
   # DELETE /projects/1.json
   def destroy
+    unless current_user && current_user.admin
+      redirect_to projects_path
+    end
     @project.destroy
     respond_to do |format|
       format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }

@@ -53,6 +53,13 @@ p {
 .active {
   color: var(--primary);
 }
+
+.container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .about,
 .contact {
   max-width: max-content;
@@ -60,8 +67,10 @@ p {
   padding: 0 var(--u-padding);
   min-height: 700px;
 }
+
 .about .title,
-.contact .title {
+.contact .title,
+.container .title {
   text-align: center;
 }
 .about-image {
@@ -78,7 +87,8 @@ p {
 
 .project-image {
   width: 80%;
-  max-width: 300px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .project-image img {
   width: 100%;
