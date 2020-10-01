@@ -1,13 +1,12 @@
 <div class="container">
-  <h1 class="title">Projects</h1>
-
-
+      <div class="gallery">
       <% @projects.each do |project| %>
-          <div class="project-image">
+          <div class="gallery-item">
             <%= image_tag(project.images[0])%>
+            <%= link_to  project_path(project) do %>
+              <p><%=project.title %></p>
+            <% end %>
           </div>
       <% end %>
-  <% if current_user && current_user.admin%>
-    <%= link_to 'New Project', new_project_path %>
-  <% end %>
+      </div>
 </div>
