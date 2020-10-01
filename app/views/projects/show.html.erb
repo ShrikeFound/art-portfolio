@@ -1,20 +1,23 @@
-<p id="notice"><%= notice %></p>
-
+<div class="container">
 <p>
   <strong>Title:</strong>
   <%= @project.title %>
 </p>
-
-<% (0...@project.images.count).each do |image| %>
-<div class="project-image">
-  <%= image_tag(@project.images[image])%>
-</div>
-<% end %>
-
 <p>
   <strong>Description:</strong>
   <%= @project.description %>
 </p>
 
+<% (0...@project.images.count).each do |image| %>
+
+<div class="project-image">
+  <%= image_tag(@project.images[image])%>
+</div>
+<% end %>
+
+
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
+<div class="project-spacer"></div>
+</div>
