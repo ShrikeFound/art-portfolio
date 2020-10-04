@@ -25,4 +25,6 @@
   font-weight: bold;
   background: var(--primary);
   color: white;
+  cursor: pointer;
+  text-transform: uppercase;
 }

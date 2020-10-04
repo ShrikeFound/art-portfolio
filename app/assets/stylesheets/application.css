@@ -18,6 +18,8 @@
   --u-padding: 25px;
   font-size: 21px;
   --primary: #d20101;
+  --alert: #ffc107;
+  --notice: #28a745;
 }
 
 *,
@@ -192,6 +194,47 @@ p {
   max-width: 100%;
 }
 
+.mailbox {
+  display: grid;
+  gap: 1rem;
+}
+.letter {
+  max-width: 100%;
+  border: 2px solid black;
+  padding: 3rem;
+  position: relative;
+}
+.letter-date {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.flash {
+  z-index: 100;
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  min-height: 3rem;
+  min-width: 10rem;
+  width: max-content;
+  max-width: 300px;
+  background-color: white;
+  padding: 0.5rem 2rem 0.5rem 3rem;
+  border-radius: 0.4em;
+  overflow-x: hidden;
+  display: grid;
+  align-items: center;
+  justify-content: right;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.flash.notice {
+  color: var(--notice);
+}
+.flash.alert {
+  color: var(--alert);
+}
 @media only screen and (min-width: 700px) {
   .gallery {
     display: grid;

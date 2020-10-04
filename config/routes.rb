@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :projects
+  resources :messages, only: [:new,:create,:index]
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout'}
   get 'about', to: "static_pages#about"
   get 'contact', to:"static_pages#contact"

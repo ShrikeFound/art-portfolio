@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="mailbox">
+  <div class="spacer"></div>
+  <% @messages.each do |message|%>
+    <div class="letter">
+      <span class="letter-date"><%= message.created_at.strftime("%m/%d/%y") %></span>
+      <h4>from: <%= message.name %> (<%= message.email%>)</h4>
+      <q><%= message.message%></q>
+      
+    </div>
+  <% end %>
+  </div>
+</div>

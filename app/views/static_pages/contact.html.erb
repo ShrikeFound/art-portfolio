@@ -5,11 +5,11 @@
   </p>
   
   <!-- This is what the form should look like> -->
-  <div class="contact-form">
-    <input type="text"    placeholder= "NAME" class="name-input">
-    <input type="text"    placeholder= "EMAIL" class="email-input">
-    <textarea name="idea" placeholder="I have this really cool idea for..." id="idea" cols="30" rows="10" class="message-input"></textarea>
-    <button class="submit-button">Submit</button>
-  </div>
+  <%= form_with model: @message, class: "contact-form" do |form| %>
+    <%= form.text_field :name, class: "name-input", placeholder: "NAME"%>
+    <%= form.text_field :email, class:"email-input", Placeholder: "EMAIL"%>
+    <%= form.text_area :message, class:"message-input", placeholder: "I have this really cool idea for...",cols:"30", rows:"10"%>
+    <%= form.submit "Submit", class:"submit-button"%>
+  <% end %>
 
 </div>
