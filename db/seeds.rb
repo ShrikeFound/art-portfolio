@@ -9,7 +9,7 @@
 
 #create Jonathan's Account
 User.destroy_all
-user = User.find_by(email: 'admin')
+user = User.find_by(email: 'jonmakesart@gmail.com')
 if user.nil?
   admin = User.new 
   admin.email = 'jonmakesart@gmail.com'
