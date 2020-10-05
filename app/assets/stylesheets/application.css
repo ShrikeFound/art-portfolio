@@ -61,11 +61,27 @@ p {
 
 .about,
 .contact {
-  max-width: max-content;
   margin: 0 auto;
   padding: 0 var(--u-padding);
   min-height: 700px;
   padding-top: 3em;
+}
+
+.contact {
+  max-width: max-content;
+}
+
+.about {
+  max-width: 1250px;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.about-text {
+  order: 0;
 }
 
 .about .title,
@@ -74,11 +90,13 @@ p {
   text-align: center;
 }
 .about-image {
-  width: 80%;
+  width: 70%;
   max-width: 400px;
   max-height: 400px;
   margin: calc(var(--u-padding) / 2) auto;
   clip-path: polygon(0% 1%, 100% 0%, 98% 96%, 2% 97%);
+  order: 2;
+  background-color: blue;
 }
 .about-image img {
   height: 100%;
@@ -246,5 +264,11 @@ p {
 
   .spacer {
     height: 5rem;
+  }
+  .about {
+    grid-template-columns: 1fr minmax(50%, 400px);
+  }
+  .about-text .title {
+    text-align: left;
   }
 }
