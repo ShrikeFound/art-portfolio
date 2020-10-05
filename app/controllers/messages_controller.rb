@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
       flash.notice = "Thank you for your message!"
 
       #This is where the mailer stuff goes
-      ContactMailer.with(@message).contact_email.deliver_now
+      # ContactMailer.with(@message).contact_email.deliver_now
 
     else
       puts "message not saved!"
